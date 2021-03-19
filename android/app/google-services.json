@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "751388595886",
+    "firebase_url": "https://flutter-apps-eb588-default-rtdb.firebaseio.com",
+    "project_id": "flutter-apps-eb588",
+    "storage_bucket": "flutter-apps-eb588.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:751388595886:android:15f254939f8fd8e0b93f3f",
+        "android_client_info": {
+          "package_name": "com.example.crmapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "751388595886-3t3qst62u24a17t9an9mlrk8j3r1g693.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTlIjrDyt5EAsaLvd9V9AN7peXUTWruEo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "751388595886-3t3qst62u24a17t9an9mlrk8j3r1g693.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
