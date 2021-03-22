@@ -44,7 +44,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
         backgroundColor: Colors.white,
         appBar: AppBar(
           leading: new IconButton(
-            icon: new Icon(Icons.arrow_back_ios, color: Colors.deepPurpleAccent),
+            icon: new Icon(Icons.arrow_back, color: Colors.deepPurpleAccent),
             onPressed: () => Navigator.of(context).pop(),
           ),
           elevation: 0.0,
@@ -80,7 +80,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                   child: Container(
                     child: TextFormField(
                       controller: email,
-                      autofocus: true,
+                      autofocus: false,
                       keyboardType: TextInputType.emailAddress,
                       //inputFormatters: [WhitelistingTextInputFormatter.digitsOnly],
                       decoration: InputDecoration(

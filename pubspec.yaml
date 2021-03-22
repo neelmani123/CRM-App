@@ -66,6 +66,9 @@ flutter:
     - assets/splash.jpg
     - assets/logo.png
     - assets/rupee.png
+    - assets/Balance.png
+    - assets/Expenses.png
+    - assets/Income.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

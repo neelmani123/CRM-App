@@ -395,10 +395,10 @@ class _AddExpenseTypeState extends State<AddExpenseType> {
             ),
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Container(
-                //margin: EdgeInsets.only(left: 20),
+                //margin: EdgeInsets.only(left: 5),
                 child: Text(
                   "Payment Type",
                   style: TextStyle(
@@ -418,7 +418,7 @@ class _AddExpenseTypeState extends State<AddExpenseType> {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(left: 100, ),
+                margin: EdgeInsets.only(left: 100,right: 40 ),
                 child: Text(
                   "Price",
                   style: TextStyle(
@@ -443,7 +443,7 @@ class _AddExpenseTypeState extends State<AddExpenseType> {
                 )
               : Flexible(
                   child: Container(
-                      //  margin: EdgeInsets.only(top: 10),
+                        margin: EdgeInsets.only(top: 10),
                       height: MediaQuery.of(context).size.height,
                       width: MediaQuery.of(context).size.width,
                       child: query.isEmpty
@@ -456,29 +456,38 @@ class _AddExpenseTypeState extends State<AddExpenseType> {
                                   child: Padding(
                                     padding: EdgeInsets.all(1),
                                     child: ExpansionTile(
-                                      trailing: SizedBox.shrink(),
-                                      title:  Row(
-                                        mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                        children: <Widget>[
-                                          Text(data[index]['payment_type']),
-                                          Text(
-                                            data[index]['date'],
-                                          ),
-                                          Row(
-                                            mainAxisAlignment: MainAxisAlignment.start,
-                                            children: [
-                                              Image.asset(
-                                                'assets/rupee.png',
-                                                color: Colors.black,
-                                                width: 15,
+                                     // trailing: Wrap(),
+                                      title:  Container(
+                                        width: 100,
+                                        child: Row(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          children: <Widget>[
+                                            Expanded(child: Text(data[index]['payment_type'])),
+                                            Expanded(
+                                              child: Container(
+                                       //       padding: EdgeInsets.only(left: 100),
+                                                child: Text(
+                                                  data[index]['date'],
+                                                ),
                                               ),
-                                              Text(
-                                                data[index]['amount'],
+                                            ),
+                                            Container(
+                                         //    padding: EdgeInsets.only(left: 50),
+                                              child: Row(
+                                                children: [
+                                                  Image.asset(
+                                                    'assets/rupee.png',
+                                                    color: Colors.black,
+                                                    width: 15,
+                                                  ),
+                                                  Text(
+                                                    data[index]['amount'],
+                                                  ),
+                                                ],
                                               ),
-                                            ],
-                                          ),
-                                        ],
+                                            ),
+                                          ],
+                                        ),
                                       ),
                                       children: [
                                         Column(
@@ -542,7 +551,7 @@ class _AddExpenseTypeState extends State<AddExpenseType> {
                               itemBuilder: (context, index) {
                                 return Card(
                                   child: Padding(
-                                    padding: EdgeInsets.all(5),
+                                    padding: EdgeInsets.all(1),
                                     child: ExpansionTile(
                                       trailing: SizedBox.shrink(),
                                       title: Row(
@@ -553,19 +562,23 @@ class _AddExpenseTypeState extends State<AddExpenseType> {
                                             child: Text(
                                                 data1[index]['payment_type']),
                                           ),
-                                          Container(
-                                              //margin: EdgeInsets.only(left: 100),
-                                              child:
-                                                  Text(data1[index]['date'])),
-                                          Container(
-                                               //margin: EdgeInsets.only(left: 70),
-                                              child:
-                                                  Text(data1[index]['amount'])),
+                                          Expanded(
+                                            child: Container(
+                                               // margin: EdgeInsets.only(left: 100),
+                                                child:
+                                                    Text(data1[index]['date'])),
+                                          ),
+                                          Expanded(
+                                            child: Container(
+                                               //  margin: EdgeInsets.only(left: 70),
+                                                child:
+                                                    Text(data1[index]['amount'])),
+                                          ),
                                         ],
                                       ),
                                       children: <Widget>[
                                         Column(
-                                          // mainAxisAlignment: MainAxisAlignment.start,
+                                           mainAxisAlignment: MainAxisAlignment.start,
                                           //crossAxisAlignment: CrossAxisAlignment.start,
                                           children: <Widget>[
                                             Row(
@@ -603,7 +616,8 @@ class _AddExpenseTypeState extends State<AddExpenseType> {
                                     ),
                                   ),
                                 );
-                              })),
+                              })
+                  ),
                 ),
           SlidingUpPanel(
             minHeight: 30,

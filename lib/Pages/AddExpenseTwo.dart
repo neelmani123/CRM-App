@@ -114,7 +114,7 @@ class _AddExpenseTwoState extends State<AddExpenseTwo> {
         //print(value['payment_type']);
         data.add(value);
         amount1 = amount1 + int.parse(value['amount']);
-        print("Amount is:=$amount1");
+       // print("Amount is:=$amount1");
 
         _isLoading = false;
       });
@@ -374,9 +374,9 @@ class _AddExpenseTwoState extends State<AddExpenseTwo> {
             Container(
               height: MediaQuery.of(context).size.height,
               child:ListView.builder(
+                reverse: true,
                   shrinkWrap: true,
-                 itemCount:data==null?Container(
-                 ):data.length,
+                 itemCount:data.length,
                   itemBuilder: (Context,index){
                     return Card(
                       child: Padding(
@@ -387,9 +387,9 @@ class _AddExpenseTwoState extends State<AddExpenseTwo> {
                             mainAxisAlignment:
                             MainAxisAlignment.spaceBetween,
                             children: <Widget>[
-                              Text(data[index]['payment_type']),
+                              Text(data.last['payment_type']),
                               Text(
-                                data[index]['date'],
+                                data.last['date'],
                               ),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.start,
@@ -400,7 +400,7 @@ class _AddExpenseTwoState extends State<AddExpenseTwo> {
                                     width: 15,
                                   ),
                                   Text(
-                                    data[index]['amount'],
+                                    data.last['amount'],
                                   ),
                                 ],
                               ),
@@ -426,7 +426,7 @@ class _AddExpenseTwoState extends State<AddExpenseTwo> {
                                       const EdgeInsets.only(
                                           left: 20),
                                       child: Text(
-                                          data[index]
+                                          data.last
                                           ['payment_mode'],
                                           overflow: TextOverflow
                                               .ellipsis),
@@ -449,7 +449,7 @@ class _AddExpenseTwoState extends State<AddExpenseTwo> {
                                       padding:
                                       const EdgeInsets.only(
                                           left: 50),
-                                      child: Text(data[index]
+                                      child: Text(data.last
                                       ['description']),
                                     ),
                                   ],

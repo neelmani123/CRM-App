@@ -1,5 +1,6 @@
 //import 'file:///E:/Flutter%20Project/crmapp/lib/Pages/AddExpenseTwo.dart';
 //import 'file:///E:/Flutter%20Project/crmapp/lib/Pages/LoginPage.dart';
+import 'package:crmapp/Pages/AllReport.dart';
 import 'package:crmapp/Pages/Product.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
@@ -580,7 +581,7 @@ class _DashBoardState extends State<DashBoard> {
                     borderRadius: BorderRadius.circular(55),
                     highlightColor: Colors.amber,
                     onTap: () {
-                      //   Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Reporting()));
+                         Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => AllReport()));
                     },
                     child: Center(
                       child: Column(

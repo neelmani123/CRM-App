@@ -37,7 +37,7 @@ class _SignUpPageState extends State<SignUpPage> {
         key: _scaffoldKey,
         appBar: AppBar(
           leading: new IconButton(
-            icon: new Icon(Icons.arrow_back_ios, color: Colors.deepPurpleAccent),
+            icon: new Icon(Icons.arrow_back, color: Colors.deepPurpleAccent),
             onPressed: () => Navigator.of(context).pop(),
           ),
           elevation: 0.0,
@@ -63,10 +63,10 @@ class _SignUpPageState extends State<SignUpPage> {
             Container(
               padding: EdgeInsets.only(left: 30.0),
               child: Text("SIGN UP",style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 17,
                   color: Colors.deepPurpleAccent,
                   fontWeight: FontWeight.bold,
-                  fontFamily: 'Avenir Heavy'
+                  fontFamily: 'Roboto'
               ),),
             ),
             SizedBox(
@@ -159,10 +159,10 @@ class _SignUpPageState extends State<SignUpPage> {
                 children: <Widget>[
                   SizedBox(
                     width: 100,
-                    height: 60,// specific value
+                    height: 50,// specific value
                     child:  RaisedButton(
                         splashColor: Color(0xFF0bc1f3),
-                        child: Text("Sign Up",style: TextStyle(fontSize: 20.0,),),
+                        child: Text("Sign Up",style: TextStyle(fontSize: 17.0,fontFamily: 'Roboto'),),
                         textColor: Color(0xFFffffff),
                         color: Colors.deepPurpleAccent,
                         onPressed: () async {

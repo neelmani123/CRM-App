@@ -74,9 +74,8 @@ class _LoginPageState extends State<LoginPage> {
                   Container(
                     padding: EdgeInsets.only(left: 25.0),
                     child: Text("Login",style: TextStyle(
-                        fontSize: 25,
+                        fontSize: 20,
                         color: Colors.deepPurpleAccent,
-                        fontWeight: FontWeight.bold,
                         fontFamily: 'Roboto'
                     ),),
                   ),
@@ -129,7 +128,7 @@ class _LoginPageState extends State<LoginPage> {
                         InkWell(
                           child: Text("Forgot Password?",style: TextStyle(
                               color: Colors.deepPurpleAccent,
-                              fontSize: 16.0,fontFamily: 'Roboto'
+                              fontSize: 15.0,fontFamily: 'Roboto'
                           ),
                           ),
                           onTap: (){
@@ -139,7 +138,7 @@ class _LoginPageState extends State<LoginPage> {
                       ],
                     ),
                   ),
-                  SizedBox(height: 5,),
+                 //SizedBox(height: 5,),
                   Padding(
                     padding: const EdgeInsets.only(left: 260),
                     child: Container(
@@ -159,12 +158,12 @@ class _LoginPageState extends State<LoginPage> {
                             )));
                           },
                           child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
-                              Text("SignUp",style: TextStyle(fontFamily: "Roboto",fontSize: 20.0, color: Colors.deepPurpleAccent,
+                              Text("SignUp",style: TextStyle(fontFamily: "Roboto",fontSize: 17.0, color: Colors.deepPurpleAccent,
                               )),
-                              Padding(padding: EdgeInsets.only(left: 1.0)),
                               // Spacer(),
-                              Padding(padding: EdgeInsets.only(left: 1.0)),
+                              Padding(padding: EdgeInsets.only(left: 10.0)),
                               Icon(Icons.arrow_forward_ios,size: 15.0, color: Colors.deepPurpleAccent,
                               ),
                             ],
@@ -181,10 +180,10 @@ class _LoginPageState extends State<LoginPage> {
                       children: <Widget>[
                         SizedBox(
                           width: 100,
-                          height: 60,// specific value
+                          height: 50,// specific value
                           child:  RaisedButton(
                               splashColor: Color(0xFF0bc1f3),
-                              child: Text("Login",style: TextStyle(fontSize: 22.0,fontFamily: 'Roboto',fontWeight: FontWeight.bold)),
+                              child: Text("Login",style: TextStyle(fontSize:20.0,fontFamily: 'Roboto')),
                               textColor: Color(0xFFffffff),
                               color: Colors.deepPurpleAccent,
                               onPressed: () async{
